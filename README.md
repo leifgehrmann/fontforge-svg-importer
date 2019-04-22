@@ -1,21 +1,26 @@
 # fontforge-svg-importer
 
-*This is still Work In Progress.* You'll notice there isn't actually any code here :P
+> **This is still Work In Progress.** You'll notice that the code does not do
+anything yet.
 
-A tool to easily import SVGs into an FontForge file.
+A tool to easily import SVGs into an existing FontForge file.
 
-The tool will also be capable of running post processing commands such as:
+The tool will be capable of running post processing commands such as:
 
 * Merge overlapping polygons
+
+## Installing
+
+1. Install FontForge CLI
 
 ## Command-Line Usage
 
 ```
-fontforge-svg-importer [--merge-overlaps] svg_file ... sfd_file
+fontforge -lang=py -script import.py svg_file ... sfd_file
 ```
 
-## Development
+## Python Version
 
-```
-python3 -m venv venv
-```
+FontForge will use the default python interpreter on launch. Because of this,
+the script is written in Python 2.7, which is the default on the Mac.
+Contributions to support Python 3.x are welcome.
