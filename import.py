@@ -6,7 +6,7 @@ font = fontforge.open(font_filename)
 
 # import each svg one at a time
 
-# select all imported charatcers, thhen apply a "remove overlap" call
+# select all imported characters, thhen apply a "remove overlap" call
 imported_charatcers = []
 font.selection.
 
