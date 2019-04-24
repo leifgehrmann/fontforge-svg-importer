@@ -1,1 +1,11 @@
 .idea
+
+# Python
+*.pyc
+
+# Mac OS
+.DS_store
+
+# Tests
+example/*.svg
+example/Test.sfd

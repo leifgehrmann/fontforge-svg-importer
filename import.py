@@ -1,17 +1,15 @@
 import sys
-import fontforge
+from fontforge_svg_importer import Font, SvgImporter
 
-font_filename = sys.argv[:-1]
-font = fontforge.open(font_filename)
+input_sfd_filename = sys.argv[1]
+output_sfd_filename = sys.argv[2]
+svg_filenames = sys.argv[3:]
 
-# import each svg one at a time
+font = Font.open_sfd(input_sfd_filename)
+importer = SvgImporter()
 
-# select all imported characters, thhen apply a "remove overlap" call
-imported_charatcers = []
-font.selection.
+for svg_filename in svg_filenames:
+    glyph = importer.get_glyph_for_svg(font, svg_filename)
+    importer.import_outlines_from_svg(glyph, svg_filename)
 
-font.save(font_filename)
-
-print("Hello World")
-print("The arguments are: " , str(sys.argv))
-print(sys.version_info)
+font.save_sfd(output_sfd_filename)
