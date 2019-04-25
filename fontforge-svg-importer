@@ -4,4 +4,4 @@ symlink_dir=`readlink $0`
 if [ ! -z $symlink_dir ]; then
     script_dir=`dirname $symlink_dir`
 fi
-fontforge -lang=py -script $script_dir/import.py $@
+fontforge -lang=py -script $script_dir/import.py "$@"
