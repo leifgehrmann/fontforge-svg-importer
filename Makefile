@@ -1,3 +1,6 @@
+install:
+	ln -s `pwd`/fontforge-svg-importer /usr/local/bin/fontforge-svg-importer
+
 tests: test-example-via-shell test-example
 
 test-example-via-shell:
