@@ -4,17 +4,24 @@
 
 A tool to easily import SVGs into an existing FontForge file.
 
-## Installing
+## Requirements
 
-1. Install FontForge CLI
+1. Install Python
+2. Install FontForge CLI
     * On Mac OS, install [Brew], then run `brew install fontforge`
     
 [Brew]: https://brew.sh/
 
+## Installing
+
+```
+make install
+```
+
 ## Command-Line Usage
 
 ```
-./fontforge-svg-importer sfd_input_filename sfd_output_filename svg_file ...
+fontforge-svg-importer sfd_input_filename sfd_output_filename svg_file ...
 ```
 
 ## Python Version
